@@ -6,10 +6,19 @@ import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { AppRoutingModule } from './app-routing.module';
+import { EvntParentComponent } from './features/event-emitter/evnt-parent/evnt-parent.component';
+import { EvntChildComponent } from './features/event-emitter/evnt-child/evnt-child.component';
+
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule, AppRoutingModule ],
-  declarations: [ AppComponent, HelloComponent, SidebarComponent ],
+  declarations: [ 
+    AppComponent, 
+    HelloComponent, 
+    SidebarComponent, 
+    EvntParentComponent, 
+    EvntChildComponent 
+    ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }

@@ -1,0 +1,5 @@
+<div id="evntParent" class="bg-light p-2">
+  <p>Parent</p>
+  <p>{{'Score: ' + score}}</p>
+  <app-evnt-child class="mt-2" (passValue)="updateScore($event)"></app-evnt-child>
+</div>
