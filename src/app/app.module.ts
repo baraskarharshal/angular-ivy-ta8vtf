@@ -8,6 +8,8 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { AppRoutingModule } from './app-routing.module';
 import { EvntParentComponent } from './features/event-emitter/evnt-parent/evnt-parent.component';
 import { EvntChildComponent } from './features/event-emitter/evnt-child/evnt-child.component';
+import { EvntEmitterService } from './features/event-emitter/evnt-emitter.service';
+
 
 
 @NgModule({
@@ -19,6 +21,7 @@ import { EvntChildComponent } from './features/event-emitter/evnt-child/evnt-chi
     EvntParentComponent, 
     EvntChildComponent 
     ],
-  bootstrap:    [ AppComponent ]
+  bootstrap:    [ AppComponent ],
+  providers: [EvntEmitterService]
 })
 export class AppModule { }

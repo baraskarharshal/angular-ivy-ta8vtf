@@ -21,5 +21,6 @@ export class EvntChildComponent implements OnInit {
   onClickDecrement() {
     this.passValue.emit(false);
   }
+  
 
 }

@@ -1,5 +1,21 @@
-<div id="evntParent" class="bg-light p-2">
-  <p>Parent</p>
-  <p>{{'Score: ' + score}}</p>
-  <app-evnt-child class="mt-2" (passValue)="updateScore($event)"></app-evnt-child>
+
+<div class="row">
+
+  <div class="col-md-8 main-panel">
+    <div id="evntParent" class="bg-light p-2">
+      <p>Parent</p>
+      <p>{{'Score: ' + score}}</p>
+      <app-evnt-child class="mt-2" (passValue)="updateScore($event)"></app-evnt-child>
+    </div>
+  </div>
+
+  <div class="col-md-4 info-panel bg-light p-0">
+    <p class="m-2">Key Points</p>
+    <ul>
+      <li class="text-primary mb-1">Event Emitter extends Rxjs Subject observable.
+      <li class="text-primary mb-1">It can be used with @Output decorator to emit value from component.
+      <li class="text-primary mb-1">Event Emitter can be defined in a service and then it can be subscribed in multiple component.
+    </ul>
+  </div>
+
 </div>

@@ -8,6 +8,10 @@ const routes: Routes = [
     path: '',
     component: EvntParentComponent,
   },
+  {
+    path: 'output_event_emitter',
+    component: EvntParentComponent,
+  },
 
 
 ];
