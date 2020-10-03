@@ -9,6 +9,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { EvntParentComponent } from './features/event-emitter/evnt-parent/evnt-parent.component';
 import { EvntChildComponent } from './features/event-emitter/evnt-child/evnt-child.component';
 import { EvntEmitterService } from './features/event-emitter/evnt-emitter.service';
+import { AsyncPipeComponent } from './features/async-pipe/async-pipe.component';
 
 
 
@@ -19,7 +20,8 @@ import { EvntEmitterService } from './features/event-emitter/evnt-emitter.servic
     HelloComponent, 
     SidebarComponent, 
     EvntParentComponent, 
-    EvntChildComponent 
+    EvntChildComponent, 
+    AsyncPipeComponent 
     ],
   bootstrap:    [ AppComponent ],
   providers: [EvntEmitterService]
