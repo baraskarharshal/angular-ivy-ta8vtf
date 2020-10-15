@@ -1,0 +1,24 @@
+<div class="row">
+  <div class="col-md-8 main-panel">
+    <div class="p-3 bg-light">
+      <p>Passing observable as input</p>
+      <p>Parent</p>
+      <button class="btn btn-primary mt-2" (click)="onClickIncrement()">
+        Increment
+      </button>
+      <app-obs-child [score]="latestScore$"></app-obs-child>
+    </div>
+  </div>
+
+  <div class="col-md-4 info-panel bg-light p-0">
+    <p class="m-2">Key Points</p>
+    <ul>
+      <li class="text-primary mb-1">
+        Observables can be passed as input to the components.
+      </li>
+      <li class="text-primary mb-1">
+        This is the best approach to pass data from parent to child component.
+      </li>
+    </ul>
+  </div>
+</div>
