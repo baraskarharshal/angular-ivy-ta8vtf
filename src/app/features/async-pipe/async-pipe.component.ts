@@ -15,8 +15,7 @@ export class AsyncPipeComponent implements AfterViewInit {
   pageNo = 0;
   contryList = new Subject<any[]>();
 
-  constructor() {
-  }
+  constructor() {}
 
   ngAfterViewInit() {
     this.contryList.next(contries.slice(0, 10));
