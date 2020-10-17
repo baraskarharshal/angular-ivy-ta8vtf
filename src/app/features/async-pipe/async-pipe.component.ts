@@ -1,21 +1,30 @@
-import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Component, OnInit } from "@angular/core";
+import { Observable, Subject } from "rxjs";
+import { contries } from "../../contries.config";
 
 @Component({
-  selector: 'app-async-pipe',
-  templateUrl: './async-pipe.component.html',
-  styleUrls: ['./async-pipe.component.css']
+  selector: "app-async-pipe",
+  templateUrl: "./async-pipe.component.html",
+  styleUrls: ["./async-pipe.component.css"]
 })
-export class AsyncPipeComponent implements OnInit {
-
+export class AsyncPipeComponent {
   time = new Observable<string>(observer => {
     setInterval(() => observer.next(new Date().toString()), 1000);
   });
 
-  constructor() { }
+  pageNo = 0;
+  contryList = new Subject<any[]>();
 
-  ngOnInit() {
+  constructor() {
+    this.contryList.next(contries.slice(0, 10));
   }
-  
 
+  refreshList() {
+    this.pageNo = ++this.pageNo;
+    const contriesList = contries.slice(
+      this.pageNo * 10,
+      this.pageNo * 10 + 10
+    );
+    this.contryList.next(contriesList);
+  }
 }
