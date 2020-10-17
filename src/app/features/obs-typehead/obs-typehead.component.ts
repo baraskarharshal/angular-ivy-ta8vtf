@@ -21,13 +21,12 @@ export class ObsTypeheadComponent implements AfterViewInit {
   constructor() {}
 
   ngAfterViewInit() {
-
     const searchBox = document.getElementById("search-box");
 
     const typeahead = fromEvent(searchBox, "input").pipe(
       map((e: KeyboardEvent) => (e.target as HTMLInputElement).value),
       filter(text => text.length > 0),
-      debounceTime(10),
+      debounceTime(500),
       distinctUntilChanged(),
       switchMap(searchTerm => this.loadCountries(searchTerm))
     );
