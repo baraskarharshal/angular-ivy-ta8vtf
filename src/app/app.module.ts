@@ -12,6 +12,7 @@ import { EvntEmitterService } from "./features/event-emitter/evnt-emitter.servic
 import { AsyncPipeComponent } from "./features/async-pipe/async-pipe.component";
 import { ObsChildComponent } from "./features/observable-input/obs-child/obs-child.component";
 import { ObsParentComponent } from "./features/observable-input/obs-parent/obs-parent.component";
+import { ObsTypeheadComponent } from "./features/obs-typehead/obs-typehead.component";
 
 @NgModule({
   imports: [BrowserModule, FormsModule, AppRoutingModule],
@@ -23,7 +24,8 @@ import { ObsParentComponent } from "./features/observable-input/obs-parent/obs-p
     EvntChildComponent,
     AsyncPipeComponent,
     ObsChildComponent,
-    ObsParentComponent
+    ObsParentComponent,
+    ObsTypeheadComponent
   ],
   bootstrap: [AppComponent],
   providers: [EvntEmitterService]
