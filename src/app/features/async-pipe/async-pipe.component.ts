@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { AfterViewInit, Component, OnInit } from "@angular/core";
 import { Observable, Subject } from "rxjs";
 import { contries } from "../../contries.config";
 
@@ -7,7 +7,7 @@ import { contries } from "../../contries.config";
   templateUrl: "./async-pipe.component.html",
   styleUrls: ["./async-pipe.component.css"]
 })
-export class AsyncPipeComponent {
+export class AsyncPipeComponent implements AfterViewInit {
   time = new Observable<string>(observer => {
     setInterval(() => observer.next(new Date().toString()), 1000);
   });
@@ -16,6 +16,9 @@ export class AsyncPipeComponent {
   contryList = new Subject<any[]>();
 
   constructor() {
+  }
+
+  ngAfterViewInit() {
     this.contryList.next(contries.slice(0, 10));
   }
 
