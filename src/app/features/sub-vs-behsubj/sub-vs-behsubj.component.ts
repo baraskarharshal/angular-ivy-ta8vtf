@@ -36,7 +36,7 @@ export class SubVsBehsubjComponent {
     });
     this.subject.next("b");
 
-    // this.behSubject.next("b");
+    this.behSubject.next("b");
     this.behSubject.subscribe(res => {
       this.behSubjectValues.push(res);
     });

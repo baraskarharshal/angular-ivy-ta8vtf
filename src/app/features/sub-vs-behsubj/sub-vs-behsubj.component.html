@@ -8,8 +8,11 @@
         </code>
 				<p>Result:</p>
 				<p *ngFor="let item of subjectValues">{{item}}</p>
-				<p>A Subject
-					doesn't hold a value.</p>
+				<p>A Subject doesn't hold a value.</p>
+				<p>Can handle values which are emitter after the subscription. Values emitter before subscription are
+					ignored. </p>
+				<p>Initialization value is not mandatory.</p>
+
 			</div>
 			<div class="col-md-6">
 				<h4>BehaviourSubject</h4>
@@ -19,6 +22,10 @@
         </code>
 				<p *ngFor="let item of behSubjectValues">{{item}}</p>
 				<p>A BehaviorSubject holds one value. When it is subscribed it emits the value immediately. </p>
+				<p>Before subscription it holds the last value emitted. If no value emitted then it takes initialization
+					value. </p>
+				<p>Initialization value is mandatory. </p>
+
 			</div>
 		</div>
 	</div>
