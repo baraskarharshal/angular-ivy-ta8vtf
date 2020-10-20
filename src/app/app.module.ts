@@ -16,6 +16,7 @@ import { ObsTypeheadComponent } from "./features/obs-typehead/obs-typehead.compo
 import { ObsTypehead2Component } from "./features/obs-typehead2/obs-typehead2.component";
 import { ObsMergemapComponent } from "./features/obs-mergemap/obs-mergemap.component";
 import { SubVsBehsubjComponent } from "./features/sub-vs-behsubj/sub-vs-behsubj.component";
+import { ObsBasicsComponent } from "./features/obs-basics/obs-basics.component";
 
 @NgModule({
   imports: [BrowserModule, FormsModule, AppRoutingModule],
@@ -31,7 +32,8 @@ import { SubVsBehsubjComponent } from "./features/sub-vs-behsubj/sub-vs-behsubj.
     ObsTypeheadComponent,
     ObsTypehead2Component,
     ObsMergemapComponent,
-    SubVsBehsubjComponent
+    SubVsBehsubjComponent,
+    ObsBasicsComponent
   ],
   bootstrap: [AppComponent],
   providers: [EvntEmitterService]

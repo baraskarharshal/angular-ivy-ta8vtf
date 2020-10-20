@@ -7,11 +7,16 @@ import { ObsTypeheadComponent } from "./features/obs-typehead/obs-typehead.compo
 import { ObsTypehead2Component } from "./features/obs-typehead2/obs-typehead2.component";
 import { ObsParentComponent } from "./features/observable-input/obs-parent/obs-parent.component";
 import { SubVsBehsubjComponent } from "./features/sub-vs-behsubj/sub-vs-behsubj.component";
+import { ObsBasicsComponent } from "./features/obs-basics/obs-basics.component";
 
 const routes: Routes = [
   {
     path: "",
     component: EvntParentComponent
+  },
+  {
+    path: "obs-basics",
+    component: ObsBasicsComponent
   },
   {
     path: "output_event_emitter",
