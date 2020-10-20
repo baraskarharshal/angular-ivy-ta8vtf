@@ -2,4 +2,37 @@
 	<h4>What is Observable?</h4>
 	<p>Observable is a wrapper object on a data source with a stream.</p>
 	<pre>{{codeStr1}}</pre>
+	<p>
+		We import Observable from the rxjs package. To create our Observable, we instantiate the class. The class
+		constructor expects a function as its parameter. The Observable will pass in an observer object. This observer
+		object is what we use to trigger events for our Observable to emit. In this simple use case, our Observable will
+		trigger an event with the value ‘hello from observable’ after a one-second delay. It is not common to create
+		Observables like this since there are operators built into RxJS that can shorten down this code. Also if you are
+		using RxJS in Angular, you are likely getting an Observable from the framework.
+	</p>
+	<p>
+		Notice in our example the observer object is scoped to the constructor. We cannot access the observer and call
+		.next() outside of the internal implementation of the Observable. This scoping ensures only the Observable knows
+		how and when the events should be emitted for subscribers of our Observables.
+	</p>
+	<p>
+		Observables by default are “Cold” meaning they are lazy and won’t run any code until there is a subscriber.
+		Observables also by default do not share their work between subscribers. For example, our use case if I
+		subscribe three times, I will have three setTimeouts created.
+	</p>
+
+	<h4>What is Subject?</h4>
+	<p>RxJS Subject is a special type of Observable that allows values to be multicasted to many Observers, whereas a
+		plain “unicast Observable” only sends notifications to a single Observer.</p>
+	<p>Subject has state, it keeps a list of observers.</p>
+	<p>
+		While Subjects are Observables, Subjects also implement an Observer interface. That is to say, they have next,
+		error, and complete methods. These methods are used to notify their counterparts on observers in the subject’s
+		internal observers list. This means a subject can be used as an observer to subscribe to any observable.
+	</p>
+	<p>
+		In RxJS, Subjects cannot be reused. That is to say, when a Subject completes or errors, it can no longer be
+		used. If you try to next on a Subject that is closed due to it’s complete or error method being called, it will
+		silently ignore the notification.
+	</p>
 </div>

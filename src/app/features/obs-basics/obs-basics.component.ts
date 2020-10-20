@@ -5,7 +5,7 @@ import { Component, OnInit } from "@angular/core";
   templateUrl: "./obs-basics.component.html",
   styleUrls: ["./obs-basics.component.css"]
 })
-export class ObsBasicsComponent implements OnInit {
+export class ObsBasicsComponent {
   codeStr1 = `
     import { Observable } from 'rxjs';
 
@@ -15,7 +15,4 @@ export class ObsBasicsComponent implements OnInit {
 
     observable.subscribe(v => console.log(v));
     `;
-  constructor() {}
-
-  ngOnInit() {}
 }
