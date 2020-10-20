@@ -6,6 +6,7 @@ import { ObsMergemapComponent } from "./features/obs-mergemap/obs-mergemap.compo
 import { ObsTypeheadComponent } from "./features/obs-typehead/obs-typehead.component";
 import { ObsTypehead2Component } from "./features/obs-typehead2/obs-typehead2.component";
 import { ObsParentComponent } from "./features/observable-input/obs-parent/obs-parent.component";
+import { SubVsBehsubjComponent } from "./features/sub-vs-behsubj/sub-vs-behsubj.component";
 
 const routes: Routes = [
   {
@@ -35,6 +36,10 @@ const routes: Routes = [
   {
     path: "merge-map",
     component: ObsMergemapComponent
+  },
+  {
+    path: "subject-vs-behsubject",
+    component: SubVsBehsubjComponent
   }
 ];
 

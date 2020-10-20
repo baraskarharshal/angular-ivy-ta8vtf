@@ -46,22 +46,24 @@
 		<p class="m-2">Key Points</p>
 		<ul>
 			<li class="text-primary mb-1">
-        MergeMap essentially is a combination of mergeAll and map.
+				MergeMap essentially is a combination of mergeAll and map.
 			</li>
-      <li class="text-primary mb-1">
-        MergeAll takes care of subscribing to the ‘inner’ Observable so that we no longer have to Subscribe two times as mergeAll merges the value of the ‘inner’ Observable into the ‘outer’ Observable.
+			<li class="text-primary mb-1">
+				MergeAll takes care of subscribing to the ‘inner’ Observable so that we no longer have to Subscribe two
+				times as mergeAll merges the value of the ‘inner’ Observable into the ‘outer’ Observable.
 			</li>
-      <li class="text-primary mb-1">
-        FlatMap is an alias of mergeMap and behaves in the same way.
+			<li class="text-primary mb-1">
+				FlatMap is an alias of mergeMap and behaves in the same way.
 			</li>
-      <li class="text-primary mb-1">
-        MergeMap merges values of all inner observables into outer observables and returns one observable. Emitting of values is based on completion of individual observable.
+			<li class="text-primary mb-1">
+				MergeMap merges values of all inner observables into outer observables and returns one observable.
+				Emitting of values is based on completion of individual observable.
 			</li>
-      <li class="text-primary mb-1">
-        SwitchMap also works like mergeMap but emits value for the latest input only.
+			<li class="text-primary mb-1">
+				SwitchMap also works like mergeMap but emits value for the latest input only.
 			</li>
-      <li class="text-primary mb-1">
-        ConcatMap also works like mergeMap but emits all values in the same order their inputs arrived.
+			<li class="text-primary mb-1">
+				ConcatMap also works like mergeMap but emits all values in the same order their inputs arrived.
 			</li>
 
 		</ul>
