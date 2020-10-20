@@ -49,4 +49,14 @@
 	<p>zip(obs1, obs2,...)</p>
 	<p>throttleTime(time)</p>
 
+	<h4>debounceTime Vs throttleTime</h4>
+	<p>debounceTime is the delay to pass value to subscription. After each value emition, there is a delay of specified
+		amount of time and then the value is passed to subscription knowing that no new value is emitted in that delay
+		time. If a new value is emitted during the delay time then from that instant delay time will restart.</p>
+	<p>A typeahead / autocomplete is the classic use case for debouncing.</p>
+	<p>throttleTime is not the delay but interval time. After the scuscription, interval starts for the specified amount
+		of time. After each interval last emitted value is passed to the subscription.</p>
+	<p>
+		<p>This can be used in the scenarios where a certain operation needs to perform once during the given time
+			interval.</p>
 </div>

@@ -1,12 +1,14 @@
 import { AfterViewInit, Component, OnInit } from "@angular/core";
-import { from, of } from "rxjs";
+import { from, of, interval } from "rxjs";
 import {
   concatMap,
   delay,
   map,
   mergeAll,
   mergeMap,
-  switchMap
+  switchMap,
+  throttleTime,
+  debounceTime
 } from "rxjs/operators";
 
 @Component({
