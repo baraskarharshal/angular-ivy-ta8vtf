@@ -14,6 +14,7 @@ import { ObsChildComponent } from "./features/observable-input/obs-child/obs-chi
 import { ObsParentComponent } from "./features/observable-input/obs-parent/obs-parent.component";
 import { ObsTypeheadComponent } from "./features/obs-typehead/obs-typehead.component";
 import { ObsTypehead2Component } from "./features/obs-typehead2/obs-typehead2.component";
+import { ObsMergemapComponent } from "./features/obs-mergemap/obs-mergemap.component";
 
 @NgModule({
   imports: [BrowserModule, FormsModule, AppRoutingModule],
@@ -27,7 +28,8 @@ import { ObsTypehead2Component } from "./features/obs-typehead2/obs-typehead2.co
     ObsChildComponent,
     ObsParentComponent,
     ObsTypeheadComponent,
-    ObsTypehead2Component
+    ObsTypehead2Component,
+    ObsMergemapComponent
   ],
   bootstrap: [AppComponent],
   providers: [EvntEmitterService]
