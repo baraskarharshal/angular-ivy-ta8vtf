@@ -1,15 +1,21 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 
 @Component({
-  selector: 'app-obs-basics',
-  templateUrl: './obs-basics.component.html',
-  styleUrls: ['./obs-basics.component.css']
+  selector: "app-obs-basics",
+  templateUrl: "./obs-basics.component.html",
+  styleUrls: ["./obs-basics.component.css"]
 })
 export class ObsBasicsComponent implements OnInit {
+  codeStr1 = `
+    import { Observable } from 'rxjs';
 
-  constructor() { }
+    const observable = new Observable(observer => {
+      setTimeout(() => observer.next('hello from Observable!'), 1000);
+    });
 
-  ngOnInit() {
-  }
+    observable.subscribe(v => console.log(v));
+    `;
+  constructor() {}
 
+  ngOnInit() {}
 }
