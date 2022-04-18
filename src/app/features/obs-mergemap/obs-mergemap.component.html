@@ -1,71 +1,84 @@
 <div class="row">
-	<div class="col-md-8 main-panel">
-		<div class="p-3">
-			<div class="row">
+  <div class="col-md-8 main-panel">
+    <div class="p-3">
+      <div class="row">
+        <div class="col-4">
+          <h4>map</h4>
+          <ul style="list-style-type:none;padding:0;">
+            <li *ngFor="let item of mapResults">{{ item }}</li>
+          </ul>
+        </div>
 
-				<div class="col-4">
-					<h4>map</h4>
-					<ul style="list-style-type:none;padding:0;">
-						<li *ngFor="let item of mapResults">{{item}}</li>
-					</ul>
-				</div>
+        <div class="col-4">
+          <h4>mergeAll</h4>
+          <ul style="list-style-type:none;padding:0;">
+            <li *ngFor="let item of mergeAllResults">{{ item }}</li>
+          </ul>
+        </div>
 
-				<div class="col-4">
-					<h4>mergeAll</h4>
-					<ul style="list-style-type:none;padding:0;">
-						<li *ngFor="let item of mergeAllResults">{{item}}</li>
-					</ul>
-				</div>
+        <div class="col-4">
+          <h4>mergeMap</h4>
+          <ul style="list-style-type:none;padding:0;">
+            <li *ngFor="let item of mergeMapResults">{{ item }}</li>
+          </ul>
+        </div>
 
-				<div class="col-4">
-					<h4>mergeMap</h4>
-					<ul style="list-style-type:none;padding:0;">
-						<li *ngFor="let item of mergeMapResults">{{item}}</li>
-					</ul>
-				</div>
+        <div class="col-4">
+          <h4>switchMap</h4>
+          <ul style="list-style-type:none;padding:0;">
+            <li *ngFor="let item of switchMapResults">{{ item }}</li>
+          </ul>
+        </div>
 
-				<div class="col-4">
-					<h4>switchMap</h4>
-					<ul style="list-style-type:none;padding:0;">
-						<li *ngFor="let item of switchMapResults">{{item}}</li>
-					</ul>
-				</div>
+        <div class="col-4">
+          <h4>concatMap</h4>
+          <ul style="list-style-type:none;padding:0;">
+            <li *ngFor="let item of concatMapResults">{{ item }}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
 
-				<div class="col-4">
-					<h4>concatMap</h4>
-					<ul style="list-style-type:none;padding:0;">
-						<li *ngFor="let item of concatMapResults">{{item}}</li>
-					</ul>
-				</div>
-
-			</div>
-		</div>
-	</div>
-
-	<div class="col-md-4 info-panel bg-light p-0">
-		<p class="m-2">Key Points</p>
-		<ul>
-			<li class="text-primary mb-1">
-				MergeMap essentially is a combination of mergeAll and map.
-			</li>
-			<li class="text-primary mb-1">
-				MergeAll takes care of subscribing to the ‘inner’ Observable so that we no longer have to Subscribe two
-				times as mergeAll merges the value of the ‘inner’ Observable into the ‘outer’ Observable.
-			</li>
-			<li class="text-primary mb-1">
-				FlatMap is an alias of mergeMap and behaves in the same way.
-			</li>
-			<li class="text-primary mb-1">
-				MergeMap merges values of all inner observables into outer observables and returns one observable.
-				Emitting of values is based on completion of individual observable.
-			</li>
-			<li class="text-primary mb-1">
-				SwitchMap also works like mergeMap but emits value for the latest input only.
-			</li>
-			<li class="text-primary mb-1">
-				ConcatMap also works like mergeMap but emits all values in the same order their inputs arrived.
-			</li>
-
-		</ul>
-	</div>
+  <div class="col-md-4 info-panel bg-light p-0">
+    <p class="m-2">Key Points</p>
+    <ul>
+      <li class="text-primary mb-1">
+        MergeMap essentially is a combination of mergeAll and map.
+      </li>
+      <li class="text-primary mb-1">
+        MergeAll takes care of subscribing to the ‘inner’ Observable so that we
+        no longer have to Subscribe two times as mergeAll merges the value of
+        the ‘inner’ Observable into the ‘outer’ Observable.
+      </li>
+      <li class="text-primary mb-1">
+        switchMap cancels previous HTTP requests that are still in progress,
+        while mergeMap lets all of them finish.
+      </li>
+      <li class="text-primary mb-1">
+        A good use case for switchMap would be an autocomplete input, where we
+        should discard all but the latest results from the user’s input.
+      </li>
+      <li class="text-primary mb-1">
+        A good use case for mergeMap would be to use in log service where we
+        need to log everything without missing anything.
+      </li>
+      <li class="text-primary mb-1">
+        FlatMap is an alias of mergeMap and behaves in the same way.
+      </li>
+      <li class="text-primary mb-1">
+        MergeMap merges values of all inner observables into outer observables
+        and returns one observable. Emitting of values is based on completion of
+        individual observable.
+      </li>
+      <li class="text-primary mb-1">
+        SwitchMap also works like mergeMap but emits value for the latest input
+        only.
+      </li>
+      <li class="text-primary mb-1">
+        ConcatMap also works like mergeMap but emits all values in the same
+        order their inputs arrived.
+      </li>
+    </ul>
+  </div>
 </div>
